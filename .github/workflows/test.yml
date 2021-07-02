@@ -1,0 +1,22 @@
+name: Node.js Test Runner
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Start selenium
+      run: docker run -d --network=host selenium/standalone-chrome:4.0.0-rc-1-prerelease-20210618
+
+    - name: Use Node.js 16
+      uses: actions/setup-node@v1
+      with:
+        node-version: 16
+
+    - run: npm install
+    - run: npm run build --if-present
+    - run: SELENIUM_HOST=http://localhost:4444/wd/hub npm test

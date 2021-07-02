@@ -1,0 +1,19 @@
+{
+  "name": "selest",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node features"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "basictap": "^2.0.0",
+    "browserstack-local": "^1.4.8",
+    "chromedriver": "^91.0.1",
+    "selenium-webdriver": "^4.0.0-beta.4"
+  }
+}
