@@ -18,6 +18,7 @@ function createServer () {
           <header>My Example Website</header>
           <main>
             <p>Just some example content for my example website.</p>
+            <button>Click Me!</button>
           </main>
         </body>
         </html>
