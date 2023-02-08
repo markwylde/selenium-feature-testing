@@ -2,7 +2,7 @@ import test from 'basictap';
 
 import { driver, query, webdriver, baseUrl} from './helpers/runner.js';
 
-test.skip('has the correct header 1', async t => {
+test('has the correct header 1', async t => {
   t.plan(1);
 
   await driver.get(baseUrl + '/');
@@ -19,3 +19,5 @@ test('ok button is on the page', async t => {
 
   t.equal(await button.getText(), 'Click Me!');
 })
+
+setTimeout(test.trigger);
